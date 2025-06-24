@@ -37,7 +37,7 @@ namespace ProyectoMaui.ViewModels
             }
         }
 
-        public async Task CrearProveedorAsync(string nombre, int telefono, string servicio)
+        public async Task CrearProveedorAsync(string nombre, string telefono, string servicio)
         {
             try
             {

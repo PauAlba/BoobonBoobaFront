@@ -10,7 +10,7 @@ namespace ProyectoMaui.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Servicio { get; set; }
     }
 }

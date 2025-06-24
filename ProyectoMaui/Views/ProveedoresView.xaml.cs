@@ -26,9 +26,10 @@ public partial class ProveedoresView : ContentPage
     {
         string nombre = nombreEntry.Text;
         string servicio = servicioEntry.Text;
+        string telefono = telefonoEntry.Text;
         
         if (!string.IsNullOrWhiteSpace(nombre) &&
-            int.TryParse(telefonoEntry.Text, out int telefono) &&
+            !string.IsNullOrWhiteSpace(telefono) &&
             !string.IsNullOrWhiteSpace(servicio))
         {
             await viewModel.CrearProveedorAsync(nombre, telefono, servicio);

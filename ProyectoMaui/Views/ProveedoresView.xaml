@@ -66,9 +66,9 @@
                                Margin="0,5">
                             <VerticalStackLayout Spacing="5">
                                 <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontAttributes="Bold" />
-                                <Label Text="{Binding Nombre, StringFormat='Nombre: {0}'}" />
+                                <Label Text="{Binding Nombre}" />
                                 <Label Text="{Binding Telefono, StringFormat='Telefono: {0}'}" />
-                                <Label Text="{Binding Servicio, StringFormat='Descripcion: {0}'}" />
+                                <Label Text="{Binding Servicio}" />
                             </VerticalStackLayout>
                         </Frame>
                     </DataTemplate>
