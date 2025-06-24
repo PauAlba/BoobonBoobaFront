@@ -5,7 +5,7 @@
              x:Class="ProyectoMaui.Views.ReportesView"
              x:Name="MainPage"
              BackgroundColor="#FFF0FA"
-             Title="Reportes de Ventas">
+             >
 
 
     <ContentPage.BindingContext>
