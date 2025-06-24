@@ -9,7 +9,7 @@ namespace ProyectoMaui.Services;
 public class AuthServices
 {
     private readonly HttpClient _httpClient;
-    private const string BaseUrl = "https://b8c8-177-245-253-133.ngrok-free.app/api/usuarios"; // Cambia si usas IP externa
+    private const string BaseUrl = "https://7c41-177-245-247-187.ngrok-free.app/api/usuarios"; 
 
     public AuthServices()
     {
@@ -19,7 +19,7 @@ public class AuthServices
     public async Task<LoginResponse?> LoginAsync(string usuario, string contrasena)
     {
         var data = new { usuario, contrasena };
-        var json = JsonConvert.SerializeObject(data); // Usamos Newtonsoft aquí
+        var json = JsonConvert.SerializeObject(data); 
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         var response = await _httpClient.PostAsync($"{BaseUrl}/login", content);
@@ -28,7 +28,7 @@ public class AuthServices
 
         var responseBody = await response.Content.ReadAsStringAsync();
 
-        // También usamos Newtonsoft aquí
+       
         return JsonConvert.DeserializeObject<LoginResponse>(responseBody);
     }
 }

@@ -17,7 +17,7 @@ namespace ProyectoMaui.Services
         {
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("https://b8c8-177-245-253-133.ngrok-free.app/api/")
+                BaseAddress = new Uri("https://7c41-177-245-247-187.ngrok-free.app/api/")
             };
         }
 

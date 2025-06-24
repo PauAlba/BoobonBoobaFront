@@ -13,7 +13,7 @@ namespace ProyectoMaui.Services
     public class ProveedorServices
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "https://342d-177-245-248-9.ngrok-free.app/";
+        private const string BaseUrl = "https://7c41-177-245-247-187.ngrok-free.app/";
         //admin@techstore.com
         //admin123
 
