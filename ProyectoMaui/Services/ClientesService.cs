@@ -13,7 +13,7 @@ public class ClientesService
     {
         _httpClient = new HttpClient
         {
-            BaseAddress = new Uri("https://7c41-177-245-247-187.ngrok-free.app/api/")
+            BaseAddress = new Uri("https://7c41-177-245-247-187.ngrok-free.app/")
         };
     }
 
@@ -26,7 +26,7 @@ public class ClientesService
             var json = JsonSerializer.Serialize(cliente);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("usuarios", content);
+            var response = await _httpClient.PostAsync("api/usuarios", content);
 
             return response.IsSuccessStatusCode;
         }
@@ -41,7 +41,7 @@ public class ClientesService
     {
         try
         {
-            var response = await _httpClient.GetAsync($"pedidos/cliente/{clienteId}");
+            var response = await _httpClient.GetAsync($"api/pedidos/cliente/{clienteId}");
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();

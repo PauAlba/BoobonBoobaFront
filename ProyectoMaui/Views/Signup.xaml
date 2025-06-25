@@ -7,93 +7,77 @@
              BackgroundColor="#FBF0FF"
              Title="Signup">
 
-    <Grid>
-        <ScrollView>
-            <Grid>
-                <VerticalStackLayout
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="Center"
-                    Padding="30"
-                    Spacing="20">
-
-                    <Image Source="booba_logo.png"
-                           HeightRequest="200"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+            
+            <Label Text="Proveedores"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black" 
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"/>
+            
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Ingresa la informacion del proveedor:" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black" Margin="5,0,0,0"
+                       HorizontalOptions="Center"
+                       WidthRequest="340"
+                       Padding="15,0,0,0"/>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="Nombre" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="nombreEntry"/>
+                </Border>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="usuario" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="usuarioEntry"
+                          />
+                </Border>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="contrasena" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="contrasenaEntry"/>
+                </Border>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="tipo" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="tipoEntry"/>
+                </Border>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="telefono" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="telefonoEntry"/>
+                </Border>
+                
+                <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                    <Entry Style="{StaticResource OvalEntryStyle}" 
+                           BackgroundColor="Transparent"
+                           Placeholder="email" 
+                           HorizontalOptions="FillAndExpand" 
+                           x:Name="emailEntry"/>
                     
-                        <VerticalStackLayout Spacing="20">
-                            
-                            <!-- Nombre -->
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="   Usuario" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black"/>
-                                <Border Style="{StaticResource OvalBorderStyle}">
-                                    <Entry Style="{StaticResource OvalEntryStyle}" BackgroundColor="Transparent" Placeholder="     Carmelo Sanchez"/>
-                                </Border>
-                            </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
 
-                            <!-- Correo -->
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="   Email" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black"/>
-                                <Border Style="{StaticResource OvalBorderStyle}">
-                                    <Entry Style="{StaticResource OvalEntryStyle}" BackgroundColor="Transparent" Placeholder="     boba@gmail.com"/>
-                                </Border>
-                            </VerticalStackLayout>
-                            
-                            <!-- Contraseña -->
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="   Contraseña" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black"/>
-                                <Border Style="{StaticResource OvalBorderStyle}">
-                                    <Entry Style="{StaticResource OvalEntryStyle}" BackgroundColor="Transparent" Placeholder="     ••••••••" IsPassword="True"/>
-                                </Border>
-                            </VerticalStackLayout>
-                            
-                            <!-- Telefono -->
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="   Telefono" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black"/>
-                                <Border Style="{StaticResource OvalBorderStyle}">
-                                    <Entry Style="{StaticResource OvalEntryStyle}" BackgroundColor="Transparent" Placeholder="     123*******"/>
-                                </Border>
-                            </VerticalStackLayout>
-
-                            <!-- Rol -->
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="   Rol" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black"/>
-                                <Picker Style="{StaticResource OvalPickerStyle}" Title="     Selecciona un rol..." SelectedIndex="{Binding SelectedRole}">
-                                    <Picker.ItemsSource>
-                                        <x:Array Type="{x:Type x:String}">
-                                            <x:String>Administrador</x:String>
-                                            <x:String>Mesero</x:String>
-                                            <x:String>Cocinero</x:String>
-                                        </x:Array>
-                                    </Picker.ItemsSource>
-                                </Picker>
-                            </VerticalStackLayout>
-                            
-                            <!-- Botón Signup -->
-                            <Button Text="Registrarme"
-                                    BackgroundColor="#451C54"
-                                    TextColor="White"
-                                    FontFamily="OpenSansSemibold" 
-                                    FontSize="15"
-                                    CornerRadius="10"
-                                    HeightRequest="50"
-                                    Clicked="OnSignupClicked"
-                                    />
-                            
-                            <Button Text="Inicia Sesión"
-                                    BackgroundColor="Transparent"
-                                    TextColor="Black"
-                                    BorderColor="Black"
-                                    FontFamily="OpenSansSemibold" 
-                                    FontSize="15"
-                                    CornerRadius="10"
-                                    HeightRequest="50"
-                                    Clicked="OnLoginViewClicked"
-                                    />
-                            
-                        </VerticalStackLayout>
-                </VerticalStackLayout>
-            </Grid>
+            <Button Text="Crear Proveedor"
+                    BackgroundColor="#451C54"
+                    TextColor="White"
+                    Clicked="OnCrearUsuarioClicked" />
+            </VerticalStackLayout>
         </ScrollView>
-    </Grid>
 </ContentPage>

@@ -53,8 +53,10 @@ public partial class Login : ContentPage
         }
     }
 
+
+    
     private async void OnSignupClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("//signup");
-    }
+        => await Shell.Current.GoToAsync("signup");
+    
+    
 }

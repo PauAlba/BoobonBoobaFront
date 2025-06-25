@@ -44,6 +44,21 @@
                                                  Text="{Binding NuevoCliente.Nombre}" />
                                       </Border>
                                   </VerticalStackLayout>
+                                  
+                                  <!-- NOMBREUSUARIO -->
+                                  <VerticalStackLayout Spacing="5">
+                                      <Label Text="NombreUsuario:" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black" Margin="5,0,0,0"
+                                             HorizontalOptions="Center"
+                                             WidthRequest="340"
+                                             Padding="15,0,0,0"/>
+                                      <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                                          <Entry Style="{StaticResource OvalEntryStyle}"
+                                                 BackgroundColor="Transparent"
+                                                 Placeholder="Euselopez"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 Text="{Binding NuevoCliente.NombreUsuario}" />
+                                      </Border>
+                                  </VerticalStackLayout>
               
                                   <!-- TELEFONO -->
                                   <VerticalStackLayout Spacing="5">
@@ -75,6 +90,22 @@
                                                  HorizontalOptions="FillAndExpand"  
                                                  Text="{Binding NuevoCliente.Email}"
                                                  />
+                                      </Border>
+                                  </VerticalStackLayout>
+                                  
+                                  <!-- CONTRASEÑA -->
+                                  <VerticalStackLayout Spacing="5">
+                                      <Label Text="Contraseña:" FontFamily="OpenSansSemibold" FontSize="15" TextColor="Black" Margin="5,0,0,0"
+                                             HorizontalOptions="Center"
+                                             WidthRequest="340"
+                                             Padding="15,0,0,0"/>
+                                      <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                                          <Entry Style="{StaticResource OvalEntryStyle}"
+                                                 BackgroundColor="Transparent"
+                                                 Placeholder="*****"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 Text="{Binding NuevoCliente.Contrsena}"
+                                          />
                                       </Border>
                                   </VerticalStackLayout>
               

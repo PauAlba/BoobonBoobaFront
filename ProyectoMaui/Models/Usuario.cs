@@ -18,7 +18,7 @@ public class Usuario
     public string Tipo { get; set; }
     public string Telefono { get; set; }
     public string Email { get; set; }
-    
+    [JsonIgnore]
     public List<Usuario> Clientes { get; set; } = new();
 
     public ICommand CargarTodosCommand { get; }
