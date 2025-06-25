@@ -96,7 +96,7 @@
                         Clicked="OnDeleteProveedorClicked" />
             </VerticalStackLayout>
 
- <VerticalStackLayout x:Name="ModificarProveedorForm" Spacing="5" IsVisible="False">
+ <VerticalStackLayout x:Name="ModificarProveedorForm" Spacing="5" IsVisible="True">
 
                     <Label Text="Editar proveedor:"
                            FontFamily="OpenSansSemibold"
