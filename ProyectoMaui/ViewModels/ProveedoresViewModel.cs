@@ -66,6 +66,11 @@ namespace ProyectoMaui.ViewModels
             }
         }
 
+                public async Task<bool> ModificarProveedorAsync(int id, Proveedor proveedor)
+        {
+            return await _proveedorService.ModificarProveedorAsync(id, proveedor);
+        }
+
         public async Task DeleteProveedorAsync(int id)
         {
             try
@@ -94,6 +99,9 @@ namespace ProyectoMaui.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
             }
         }
+
+        
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
 
