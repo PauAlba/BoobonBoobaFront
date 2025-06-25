@@ -96,6 +96,56 @@
                         Clicked="OnDeleteProveedorClicked" />
             </VerticalStackLayout>
 
+ <VerticalStackLayout x:Name="ModificarProveedorForm" Spacing="5" IsVisible="False">
+
+                    <Label Text="Editar proveedor:"
+                           FontFamily="OpenSansSemibold"
+                           FontSize="15"
+                           TextColor="Black"
+                           Margin="5,0,0,0"
+                           HorizontalOptions="Center"
+                           WidthRequest="340"
+                           Padding="15,0,0,0"/>
+                    
+                    <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                        <Entry Style="{StaticResource OvalEntryStyle}" 
+                               BackgroundColor="Transparent"
+                               Placeholder="Nombre"
+                               x:Name="idEntryMod"
+                               HorizontalOptions="FillAndExpand"/>
+                    </Border>
+
+                    <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                        <Entry Style="{StaticResource OvalEntryStyle}" 
+                               BackgroundColor="Transparent"
+                               Placeholder="Nombre"
+                               x:Name="nombreEntryMod"
+                               HorizontalOptions="FillAndExpand"/>
+                    </Border>
+
+                    <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                        <Entry Style="{StaticResource OvalEntryStyle}" 
+                               BackgroundColor="Transparent"
+                               Placeholder="Teléfono"
+                               x:Name="telefonoEntryMod"
+                               Keyboard="Numeric"
+                               HorizontalOptions="FillAndExpand"/>
+                    </Border>
+
+                    <Border Style="{StaticResource OvalBorderStyle}" Padding="15,0">
+                        <Entry Style="{StaticResource OvalEntryStyle}" 
+                               BackgroundColor="Transparent"
+                               Placeholder="Servicio"
+                               x:Name="servicioEntryMod"
+                               HorizontalOptions="FillAndExpand"/>
+                    </Border>
+
+                    <Button Text="Guardar Cambios"
+                            BackgroundColor="#451C54"
+                            TextColor="White"
+                            Clicked="OnModificarProveedorClicked"/>
+                </VerticalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
