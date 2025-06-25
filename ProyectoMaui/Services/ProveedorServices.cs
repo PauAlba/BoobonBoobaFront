@@ -173,6 +173,24 @@ namespace ProyectoMaui.Services
             }
         }
 
+                public async Task<bool> ModificarProveedorAsync(int id, Proveedor proveedor)
+        {
+            try
+            {
+                var response = await _httpClient.PutAsJsonAsync($"api/proveedores/{id}", proveedor);
+
+                var content = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"RESPUESTA PUT: {content}");
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ERROR EN PUT: {ex.Message}");
+                return false;
+            }
+        }
+
 
     }
 }
